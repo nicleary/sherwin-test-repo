@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    command: ['bash', '-c', 'python manage.py migrate && python manage.py loaddata initial_data.json && gunicorn --bind :8000 --workers 16 --reload wsgi:application']

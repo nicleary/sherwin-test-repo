@@ -5,3 +5,6 @@ django-filter==22.1
 
 # Webserver
 gunicorn==20.1.0
+
+# Auto Generated Swagger Doc
+drf_spectacular==0.24.2
